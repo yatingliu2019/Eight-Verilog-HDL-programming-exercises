@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Jan 01 01:45:52 2013
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : SHIF6L
+Top-level Entity Name : SHIF6L
+Family : Cyclone
+Device : EP1C6Q240C8
+Timing Models : Final
+Total logic elements : 16 / 5,980 ( < 1 % )
+Total pins : 8 / 185 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 92,160 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

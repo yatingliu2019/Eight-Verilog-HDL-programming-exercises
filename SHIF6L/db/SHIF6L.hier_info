@@ -1,0 +1,19 @@
+|SHIF6L
+clk => temp[0].CLK
+clk => temp[1].CLK
+clk => temp[2].CLK
+clk => qtemp[0].CLK
+clk => qtemp[1].CLK
+clk => qtemp[2].CLK
+clk => qtemp[3].CLK
+clk => qtemp[4].CLK
+clk => qtemp[5].CLK
+din => qtemp[0].DATAIN
+dout[0] <= dout[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
