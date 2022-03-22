@@ -1,0 +1,24 @@
+module CODE4_16(a,bb);
+	input [15:0] a;
+	output reg[3:0] bb;
+	always@(*)
+	begin
+		if(in[15]==1) bb=4'b1111;
+	else if(in[14]==1) bb=4'b1110;
+	else if(in[13]==1) bb=4'b1101;
+	else if(in[12]==1) bb=4'b1100;
+	else if(in[11]==1) bb=4'b1011;
+	else if(in[10]==1) bb=4'b1010;
+	else if(in[9]==1) bb=4'b1001;
+	else if(in[8]==1) bb=4'b1000;
+	else if(in[7]==1) bb=4'b0111;
+	else if(in[6]==1) bb=4'b0110;
+	else if(in[5]==1) bb=4'b0101;
+	else if(in[4]==1) bb=4'b0100;
+	else if(in[3]==1) bb=4'b0011;
+	else if(in[2]==1) bb=4'b0010;
+	else if(in[1]==1) bb=4'b0001;
+	else if(in[0]==1) bb=4'b0000;
+	else bb=4'b0000;
+	end
+endmodule
