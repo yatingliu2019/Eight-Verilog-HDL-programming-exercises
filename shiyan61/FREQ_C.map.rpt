@@ -1,0 +1,353 @@
+Analysis & Synthesis report for FREQ_C
+Tue Jan 01 04:55:03 2013
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "REG32B:reg32b"
+ 10. Port Connectivity Checks: "COUNTER32:u8"
+ 11. Port Connectivity Checks: "COUNTER32:u7"
+ 12. Port Connectivity Checks: "COUNTER32:u6"
+ 13. Port Connectivity Checks: "COUNTER32:u5"
+ 14. Port Connectivity Checks: "COUNTER32:u4"
+ 15. Port Connectivity Checks: "COUNTER32:u3"
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Jan 01 04:55:03 2013    ;
+; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name               ; FREQ_C                                   ;
+; Top-level Entity Name       ; FREQ_C                                   ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; 26                                       ;
+; Total pins                  ; 34                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP1C6Q240C8        ;                    ;
+; Top-level entity name                                                      ; FREQ_C             ; FREQ_C             ;
+; Family name                                                                ; Cyclone            ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                     ;
++----------------------------------+-----------------+------------------------+------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ;
++----------------------------------+-----------------+------------------------+------------------------------+
+; COUNTER32.v                      ; yes             ; User Verilog HDL File  ; D:/shiyan61/COUNTER32.v      ;
+; FREQ_C.v                         ; yes             ; User Verilog HDL File  ; D:/shiyan61/FREQ_C.v         ;
+; FTCTRL.v                         ; yes             ; User Verilog HDL File  ; D:/shiyan61/FTCTRL.v         ;
+; REG32B.v                         ; yes             ; User Verilog HDL File  ; D:/shiyan61/REG32B.v         ;
++----------------------------------+-----------------+------------------------+------------------------------+
+
+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Total logic elements                        ; 26                    ;
+;     -- Combinational with no register       ; 3                     ;
+;     -- Register only                        ; 10                    ;
+;     -- Combinational with a register        ; 13                    ;
+;                                             ;                       ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 11                    ;
+;     -- 3 input functions                    ; 3                     ;
+;     -- 2 input functions                    ; 1                     ;
+;     -- 1 input functions                    ; 1                     ;
+;     -- 0 input functions                    ; 0                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 26                    ;
+;     -- arithmetic mode                      ; 0                     ;
+;     -- qfbk mode                            ; 0                     ;
+;     -- register cascade mode                ; 0                     ;
+;     -- synchronous clear/load mode          ; 0                     ;
+;     -- asynchronous clear/load mode         ; 12                    ;
+;                                             ;                       ;
+; Total registers                             ; 23                    ;
+; I/O pins                                    ; 34                    ;
+; Maximum fan-out node                        ; FTCTRL:ftctrl|Div2CLK ;
+; Maximum fan-out                             ; 24                    ;
+; Total fan-out                               ; 123                   ;
+; Average fan-out                             ; 2.05                  ;
++---------------------------------------------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name   ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------+--------------+
+; |FREQ_C                    ; 26 (0)      ; 23           ; 0           ; 34   ; 0            ; 3 (0)        ; 10 (0)            ; 13 (0)           ; 0 (0)           ; 0 (0)      ; |FREQ_C               ; work         ;
+;    |COUNTER32:u1|          ; 5 (5)       ; 4            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |FREQ_C|COUNTER32:u1  ;              ;
+;    |COUNTER32:u2|          ; 5 (5)       ; 4            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |FREQ_C|COUNTER32:u2  ;              ;
+;    |COUNTER32:u3|          ; 4 (4)       ; 4            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |FREQ_C|COUNTER32:u3  ;              ;
+;    |FTCTRL:ftctrl|         ; 2 (2)       ; 1            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |FREQ_C|FTCTRL:ftctrl ;              ;
+;    |REG32B:reg32b|         ; 10 (10)     ; 10           ; 0           ; 0    ; 0            ; 0 (0)        ; 10 (10)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |FREQ_C|REG32B:reg32b ;              ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 23    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 12    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "REG32B:reg32b"                                                                                                                                                                       ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; DIN   ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; DAT32 ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (32 bits) it drives.  The 22 most-significant bit(s) in the port expression will be connected to GND.            ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER32:u8"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; DOUT ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; COUT ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER32:u7"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; DOUT ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER32:u6"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; DOUT ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER32:u5"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; DOUT ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER32:u4"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; DOUT ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER32:u3"                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; DOUT[3..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Tue Jan 01 04:55:03 2013
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FREQ_C -c FREQ_C
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Found 1 design units, including 1 entities, in source file counter32.v
+    Info: Found entity 1: COUNTER32
+Info: Found 1 design units, including 1 entities, in source file freq_c.v
+    Info: Found entity 1: FREQ_C
+Info: Found 1 design units, including 1 entities, in source file ftctrl.v
+    Info: Found entity 1: FTCTRL
+Info: Found 1 design units, including 1 entities, in source file reg32b.v
+    Info: Found entity 1: REG32B
+Info: Elaborating entity "FREQ_C" for the top level hierarchy
+Info: Elaborating entity "FTCTRL" for hierarchy "FTCTRL:ftctrl"
+Info: Elaborating entity "COUNTER32" for hierarchy "COUNTER32:u1"
+Warning (10230): Verilog HDL assignment warning at COUNTER32.v(15): truncated value with size 32 to match size of target (4)
+Info: Elaborating entity "REG32B" for hierarchy "REG32B:reg32b"
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "DATOUT[10]" is stuck at GND
+    Warning (13410): Pin "DATOUT[11]" is stuck at GND
+    Warning (13410): Pin "DATOUT[12]" is stuck at GND
+    Warning (13410): Pin "DATOUT[13]" is stuck at GND
+    Warning (13410): Pin "DATOUT[14]" is stuck at GND
+    Warning (13410): Pin "DATOUT[15]" is stuck at GND
+    Warning (13410): Pin "DATOUT[16]" is stuck at GND
+    Warning (13410): Pin "DATOUT[17]" is stuck at GND
+    Warning (13410): Pin "DATOUT[18]" is stuck at GND
+    Warning (13410): Pin "DATOUT[19]" is stuck at GND
+    Warning (13410): Pin "DATOUT[20]" is stuck at GND
+    Warning (13410): Pin "DATOUT[21]" is stuck at GND
+    Warning (13410): Pin "DATOUT[22]" is stuck at GND
+    Warning (13410): Pin "DATOUT[23]" is stuck at GND
+    Warning (13410): Pin "DATOUT[24]" is stuck at GND
+    Warning (13410): Pin "DATOUT[25]" is stuck at GND
+    Warning (13410): Pin "DATOUT[26]" is stuck at GND
+    Warning (13410): Pin "DATOUT[27]" is stuck at GND
+    Warning (13410): Pin "DATOUT[28]" is stuck at GND
+    Warning (13410): Pin "DATOUT[29]" is stuck at GND
+    Warning (13410): Pin "DATOUT[30]" is stuck at GND
+    Warning (13410): Pin "DATOUT[31]" is stuck at GND
+Info: Implemented 60 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 32 output pins
+    Info: Implemented 26 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 192 megabytes
+    Info: Processing ended: Tue Jan 01 04:55:03 2013
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.709 ns
+From           : REG32B:reg32b|DAT32[5]
+To             : DATOUT[5]
+From Clock     : CLK1Hz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Fin'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : COUNTER32:u3|DOUT[0]
+To             : COUNTER32:u3|DOUT[3]
+From Clock     : Fin
+To Clock       : Fin
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK1Hz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : FTCTRL:ftctrl|Div2CLK
+To             : FTCTRL:ftctrl|Div2CLK
+From Clock     : CLK1Hz
+To Clock       : CLK1Hz
+Failed Paths   : 0
+
+Type           : Clock Hold: 'Fin'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : COUNTER32:u3|DOUT[2]
+To             : COUNTER32:u3|DOUT[0]
+From Clock     : Fin
+To Clock       : Fin
+Failed Paths   : 4
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 4
+
+--------------------------------------------------------------------------------------
+

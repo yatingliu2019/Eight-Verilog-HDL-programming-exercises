@@ -1,0 +1,93 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 222 10/21/2009 SJ Full Version
+# Date created = 04:06:46  January 01, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		FREQ_C_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C6Q240C8
+set_global_assignment -name TOP_LEVEL_ENTITY FREQ_C
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "04:06:46  JANUARY 01, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.1
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name VERILOG_FILE COUNTER32.v
+set_global_assignment -name VERILOG_FILE FREQ_C.v
+set_global_assignment -name VERILOG_FILE FTCTRL.v
+set_global_assignment -name VERILOG_FILE REG32B.v
+set_global_assignment -name MISC_FILE "C:/Users/6151/Desktop/shiyan6/FREQ_C.dpf"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_153 -to CLK1Hz
+set_location_assignment PIN_168 -to DATOUT[31]
+set_location_assignment PIN_167 -to DATOUT[30]
+set_location_assignment PIN_166 -to DATOUT[29]
+set_location_assignment PIN_165 -to DATOUT[28]
+set_location_assignment PIN_164 -to DATOUT[27]
+set_location_assignment PIN_163 -to DATOUT[26]
+set_location_assignment PIN_162 -to DATOUT[25]
+set_location_assignment PIN_161 -to DATOUT[24]
+set_location_assignment PIN_160 -to DATOUT[23]
+set_location_assignment PIN_159 -to DATOUT[22]
+set_location_assignment PIN_158 -to DATOUT[21]
+set_location_assignment PIN_141 -to DATOUT[20]
+set_location_assignment PIN_140 -to DATOUT[19]
+set_location_assignment PIN_139 -to DATOUT[18]
+set_location_assignment PIN_138 -to DATOUT[17]
+set_location_assignment PIN_137 -to DATOUT[16]
+set_location_assignment PIN_136 -to DATOUT[15]
+set_location_assignment PIN_135 -to DATOUT[14]
+set_location_assignment PIN_134 -to DATOUT[13]
+set_location_assignment PIN_133 -to DATOUT[12]
+set_location_assignment PIN_132 -to DATOUT[11]
+set_location_assignment PIN_128 -to DATOUT[10]
+set_location_assignment PIN_41 -to DATOUT[9]
+set_location_assignment PIN_21 -to DATOUT[8]
+set_location_assignment PIN_20 -to DATOUT[7]
+set_location_assignment PIN_19 -to DATOUT[6]
+set_location_assignment PIN_18 -to DATOUT[5]
+set_location_assignment PIN_17 -to DATOUT[4]
+set_location_assignment PIN_16 -to DATOUT[3]
+set_location_assignment PIN_15 -to DATOUT[2]
+set_location_assignment PIN_14 -to DATOUT[1]
+set_location_assignment PIN_13 -to DATOUT[0]
+set_location_assignment PIN_28 -to Fin
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name MISC_FILE "D:/shiyan61/FREQ_C.dpf"

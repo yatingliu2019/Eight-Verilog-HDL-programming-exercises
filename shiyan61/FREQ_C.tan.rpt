@@ -1,0 +1,324 @@
+Classic Timing Analyzer report for FREQ_C
+Tue Jan 01 04:55:11 2013
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLK1Hz'
+  7. Clock Setup: 'Fin'
+  8. Clock Hold: 'Fin'
+  9. tco
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                          ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+------------------------+-----------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                                    ; From                   ; To                    ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+------------------------+-----------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A                                      ; None          ; 15.709 ns                                      ; REG32B:reg32b|DAT32[5] ; DATOUT[5]             ; CLK1Hz     ; --       ; 0            ;
+; Clock Setup: 'Fin'           ; N/A                                      ; None          ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[0]   ; COUNTER32:u3|DOUT[3]  ; Fin        ; Fin      ; 0            ;
+; Clock Setup: 'CLK1Hz'        ; N/A                                      ; None          ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; FTCTRL:ftctrl|Div2CLK  ; FTCTRL:ftctrl|Div2CLK ; CLK1Hz     ; CLK1Hz   ; 0            ;
+; Clock Hold: 'Fin'            ; Not operational: Clock Skew > Data Delay ; None          ; N/A                                            ; COUNTER32:u3|DOUT[2]   ; COUNTER32:u3|DOUT[0]  ; Fin        ; Fin      ; 4            ;
+; Total number of failed paths ;                                          ;               ;                                                ;                        ;                       ;            ;          ; 4            ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+------------------------+-----------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP1C6Q240C8        ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK1Hz          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; Fin             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK1Hz'                                                                                                                                                                                              ;
++-------+------------------------------------------------+-----------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                  ; To                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; FTCTRL:ftctrl|Div2CLK ; FTCTRL:ftctrl|Div2CLK ; CLK1Hz     ; CLK1Hz   ; None                        ; None                      ; 0.822 ns                ;
++-------+------------------------------------------------+-----------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Fin'                                                                                                                                                                                               ;
++-------+------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                 ; To                   ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[0] ; COUNTER32:u3|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[0] ; COUNTER32:u3|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.296 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[0] ; COUNTER32:u3|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 1.296 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[3] ; COUNTER32:u3|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.177 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[3] ; COUNTER32:u3|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 1.163 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[2] ; COUNTER32:u3|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 1.157 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[1] ; COUNTER32:u3|DOUT[1] ; Fin        ; Fin      ; None                        ; None                      ; 1.143 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[1] ; COUNTER32:u3|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 1.054 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[1] ; COUNTER32:u3|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 1.054 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[1] ; COUNTER32:u3|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.053 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[0] ; COUNTER32:u3|DOUT[1] ; Fin        ; Fin      ; None                        ; None                      ; 1.053 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[2] ; COUNTER32:u2|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.441 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[3] ; COUNTER32:u3|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 0.898 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[3] ; COUNTER32:u3|DOUT[1] ; Fin        ; Fin      ; None                        ; None                      ; 0.894 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[2] ; COUNTER32:u3|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 0.888 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u3|DOUT[2] ; COUNTER32:u3|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 0.880 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[0] ; COUNTER32:u2|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.338 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[2] ; COUNTER32:u2|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 1.335 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[2] ; COUNTER32:u2|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 1.327 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[1] ; COUNTER32:u2|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.255 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[3] ; COUNTER32:u2|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[3] ; COUNTER32:u2|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.190 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[3] ; COUNTER32:u2|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 1.185 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[1] ; COUNTER32:u2|DOUT[1] ; Fin        ; Fin      ; None                        ; None                      ; 1.177 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[0] ; COUNTER32:u2|DOUT[1] ; Fin        ; Fin      ; None                        ; None                      ; 1.091 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[0] ; COUNTER32:u2|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 1.090 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[0] ; COUNTER32:u2|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 1.081 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[3] ; COUNTER32:u2|DOUT[1] ; Fin        ; Fin      ; None                        ; None                      ; 0.923 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[1] ; COUNTER32:u2|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 0.913 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u2|DOUT[1] ; COUNTER32:u2|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 0.902 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[0] ; COUNTER32:u1|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 1.323 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[0] ; COUNTER32:u1|DOUT[1] ; Fin        ; Fin      ; None                        ; None                      ; 1.316 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[0] ; COUNTER32:u1|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 1.315 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[0] ; COUNTER32:u1|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.314 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[3] ; COUNTER32:u1|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.188 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[2] ; COUNTER32:u1|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 1.172 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[3] ; COUNTER32:u1|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 1.170 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[1] ; COUNTER32:u1|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 1.068 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[1] ; COUNTER32:u1|DOUT[1] ; Fin        ; Fin      ; None                        ; None                      ; 1.062 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[1] ; COUNTER32:u1|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 1.061 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[1] ; COUNTER32:u1|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 1.060 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[3] ; COUNTER32:u1|DOUT[2] ; Fin        ; Fin      ; None                        ; None                      ; 0.908 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[3] ; COUNTER32:u1|DOUT[1] ; Fin        ; Fin      ; None                        ; None                      ; 0.906 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[2] ; COUNTER32:u1|DOUT[3] ; Fin        ; Fin      ; None                        ; None                      ; 0.904 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; COUNTER32:u1|DOUT[2] ; COUNTER32:u1|DOUT[0] ; Fin        ; Fin      ; None                        ; None                      ; 0.894 ns                ;
++-------+------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'Fin'                                                                                                                                                                                   ;
++------------------------------------------+----------------------+----------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                 ; To                   ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+----------------------+----------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; COUNTER32:u3|DOUT[2] ; COUNTER32:u3|DOUT[0] ; Fin        ; Fin      ; None                       ; None                       ; 0.880 ns                 ;
+; Not operational: Clock Skew > Data Delay ; COUNTER32:u3|DOUT[2] ; COUNTER32:u3|DOUT[3] ; Fin        ; Fin      ; None                       ; None                       ; 0.888 ns                 ;
+; Not operational: Clock Skew > Data Delay ; COUNTER32:u3|DOUT[3] ; COUNTER32:u3|DOUT[1] ; Fin        ; Fin      ; None                       ; None                       ; 0.894 ns                 ;
+; Not operational: Clock Skew > Data Delay ; COUNTER32:u3|DOUT[3] ; COUNTER32:u3|DOUT[2] ; Fin        ; Fin      ; None                       ; None                       ; 0.898 ns                 ;
++------------------------------------------+----------------------+----------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; tco                                                                                 ;
++-------+--------------+------------+------------------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From                   ; To        ; From Clock ;
++-------+--------------+------------+------------------------+-----------+------------+
+; N/A   ; None         ; 15.709 ns  ; REG32B:reg32b|DAT32[5] ; DATOUT[5] ; CLK1Hz     ;
+; N/A   ; None         ; 15.704 ns  ; REG32B:reg32b|DAT32[4] ; DATOUT[4] ; CLK1Hz     ;
+; N/A   ; None         ; 15.278 ns  ; REG32B:reg32b|DAT32[7] ; DATOUT[7] ; CLK1Hz     ;
+; N/A   ; None         ; 15.242 ns  ; REG32B:reg32b|DAT32[6] ; DATOUT[6] ; CLK1Hz     ;
+; N/A   ; None         ; 14.655 ns  ; REG32B:reg32b|DAT32[9] ; DATOUT[9] ; CLK1Hz     ;
+; N/A   ; None         ; 13.713 ns  ; REG32B:reg32b|DAT32[8] ; DATOUT[8] ; CLK1Hz     ;
+; N/A   ; None         ; 13.666 ns  ; REG32B:reg32b|DAT32[3] ; DATOUT[3] ; CLK1Hz     ;
+; N/A   ; None         ; 13.662 ns  ; REG32B:reg32b|DAT32[1] ; DATOUT[1] ; CLK1Hz     ;
+; N/A   ; None         ; 13.661 ns  ; REG32B:reg32b|DAT32[0] ; DATOUT[0] ; CLK1Hz     ;
+; N/A   ; None         ; 13.658 ns  ; REG32B:reg32b|DAT32[2] ; DATOUT[2] ; CLK1Hz     ;
++-------+--------------+------------+------------------------+-----------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Tue Jan 01 04:55:11 2013
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off FREQ_C -c FREQ_C --timing_analysis_only
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK1Hz" is an undefined clock
+    Info: Assuming node "Fin" is an undefined clock
+Warning: Found 11 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "COUNTER32:u2|Equal0" as buffer
+    Info: Detected gated clock "COUNTER32:u1|Equal0" as buffer
+    Info: Detected ripple clock "COUNTER32:u2|DOUT[3]" as buffer
+    Info: Detected ripple clock "COUNTER32:u2|DOUT[2]" as buffer
+    Info: Detected ripple clock "COUNTER32:u2|DOUT[1]" as buffer
+    Info: Detected ripple clock "COUNTER32:u2|DOUT[0]" as buffer
+    Info: Detected ripple clock "COUNTER32:u1|DOUT[3]" as buffer
+    Info: Detected ripple clock "COUNTER32:u1|DOUT[2]" as buffer
+    Info: Detected ripple clock "COUNTER32:u1|DOUT[1]" as buffer
+    Info: Detected ripple clock "FTCTRL:ftctrl|Div2CLK" as buffer
+    Info: Detected ripple clock "COUNTER32:u1|DOUT[0]" as buffer
+Info: Clock "CLK1Hz" Internal fmax is restricted to 275.03 MHz between source register "FTCTRL:ftctrl|Div2CLK" and destination register "FTCTRL:ftctrl|Div2CLK"
+    Info: fmax restricted to Clock High delay (1.818 ns) plus Clock Low delay (1.818 ns) : restricted to 3.636 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 0.822 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X23_Y14_N5; Fanout = 24; REG Node = 'FTCTRL:ftctrl|Div2CLK'
+            Info: 2: + IC(0.513 ns) + CELL(0.309 ns) = 0.822 ns; Loc. = LC_X23_Y14_N5; Fanout = 24; REG Node = 'FTCTRL:ftctrl|Div2CLK'
+            Info: Total cell delay = 0.309 ns ( 37.59 % )
+            Info: Total interconnect delay = 0.513 ns ( 62.41 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "CLK1Hz" to destination register is 3.808 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_153; Fanout = 2; CLK Node = 'CLK1Hz'
+                Info: 2: + IC(1.628 ns) + CELL(0.711 ns) = 3.808 ns; Loc. = LC_X23_Y14_N5; Fanout = 24; REG Node = 'FTCTRL:ftctrl|Div2CLK'
+                Info: Total cell delay = 2.180 ns ( 57.25 % )
+                Info: Total interconnect delay = 1.628 ns ( 42.75 % )
+            Info: - Longest clock path from clock "CLK1Hz" to source register is 3.808 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_153; Fanout = 2; CLK Node = 'CLK1Hz'
+                Info: 2: + IC(1.628 ns) + CELL(0.711 ns) = 3.808 ns; Loc. = LC_X23_Y14_N5; Fanout = 24; REG Node = 'FTCTRL:ftctrl|Div2CLK'
+                Info: Total cell delay = 2.180 ns ( 57.25 % )
+                Info: Total interconnect delay = 1.628 ns ( 42.75 % )
+        Info: + Micro clock to output delay of source is 0.224 ns
+        Info: + Micro setup delay of destination is 0.037 ns
+Info: Clock "Fin" Internal fmax is restricted to 275.03 MHz between source register "COUNTER32:u3|DOUT[0]" and destination register "COUNTER32:u3|DOUT[3]"
+    Info: fmax restricted to Clock High delay (1.818 ns) plus Clock Low delay (1.818 ns) : restricted to 3.636 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.301 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X1_Y19_N2; Fanout = 5; REG Node = 'COUNTER32:u3|DOUT[0]'
+            Info: 2: + IC(0.563 ns) + CELL(0.738 ns) = 1.301 ns; Loc. = LC_X1_Y19_N5; Fanout = 4; REG Node = 'COUNTER32:u3|DOUT[3]'
+            Info: Total cell delay = 0.738 ns ( 56.73 % )
+            Info: Total interconnect delay = 0.563 ns ( 43.27 % )
+        Info: - Smallest clock skew is -1.126 ns
+            Info: + Shortest clock path from clock "Fin" to destination register is 14.564 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_28; Fanout = 4; CLK Node = 'Fin'
+                Info: 2: + IC(0.774 ns) + CELL(0.935 ns) = 3.178 ns; Loc. = LC_X5_Y14_N6; Fanout = 6; REG Node = 'COUNTER32:u1|DOUT[0]'
+                Info: 3: + IC(0.579 ns) + CELL(0.114 ns) = 3.871 ns; Loc. = LC_X5_Y14_N3; Fanout = 4; COMB Node = 'COUNTER32:u1|Equal0'
+                Info: 4: + IC(4.328 ns) + CELL(0.935 ns) = 9.134 ns; Loc. = LC_X27_Y14_N0; Fanout = 6; REG Node = 'COUNTER32:u2|DOUT[3]'
+                Info: 5: + IC(0.609 ns) + CELL(0.114 ns) = 9.857 ns; Loc. = LC_X27_Y14_N9; Fanout = 4; COMB Node = 'COUNTER32:u2|Equal0'
+                Info: 6: + IC(3.996 ns) + CELL(0.711 ns) = 14.564 ns; Loc. = LC_X1_Y19_N5; Fanout = 4; REG Node = 'COUNTER32:u3|DOUT[3]'
+                Info: Total cell delay = 4.278 ns ( 29.37 % )
+                Info: Total interconnect delay = 10.286 ns ( 70.63 % )
+            Info: - Longest clock path from clock "Fin" to source register is 15.690 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_28; Fanout = 4; CLK Node = 'Fin'
+                Info: 2: + IC(0.774 ns) + CELL(0.935 ns) = 3.178 ns; Loc. = LC_X5_Y14_N0; Fanout = 6; REG Node = 'COUNTER32:u1|DOUT[3]'
+                Info: 3: + IC(0.770 ns) + CELL(0.590 ns) = 4.538 ns; Loc. = LC_X5_Y14_N3; Fanout = 4; COMB Node = 'COUNTER32:u1|Equal0'
+                Info: 4: + IC(4.328 ns) + CELL(0.935 ns) = 9.801 ns; Loc. = LC_X27_Y14_N7; Fanout = 5; REG Node = 'COUNTER32:u2|DOUT[2]'
+                Info: 5: + IC(0.592 ns) + CELL(0.590 ns) = 10.983 ns; Loc. = LC_X27_Y14_N9; Fanout = 4; COMB Node = 'COUNTER32:u2|Equal0'
+                Info: 6: + IC(3.996 ns) + CELL(0.711 ns) = 15.690 ns; Loc. = LC_X1_Y19_N2; Fanout = 5; REG Node = 'COUNTER32:u3|DOUT[0]'
+                Info: Total cell delay = 5.230 ns ( 33.33 % )
+                Info: Total interconnect delay = 10.460 ns ( 66.67 % )
+        Info: + Micro clock to output delay of source is 0.224 ns
+        Info: + Micro setup delay of destination is 0.037 ns
+Warning: Circuit may not operate. Detected 4 non-operational path(s) clocked by clock "Fin" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "COUNTER32:u3|DOUT[2]" and destination pin or register "COUNTER32:u3|DOUT[0]" for clock "Fin" (Hold time is 37 ps)
+    Info: + Largest clock skew is 1.126 ns
+        Info: + Longest clock path from clock "Fin" to destination register is 15.690 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_28; Fanout = 4; CLK Node = 'Fin'
+            Info: 2: + IC(0.774 ns) + CELL(0.935 ns) = 3.178 ns; Loc. = LC_X5_Y14_N0; Fanout = 6; REG Node = 'COUNTER32:u1|DOUT[3]'
+            Info: 3: + IC(0.770 ns) + CELL(0.590 ns) = 4.538 ns; Loc. = LC_X5_Y14_N3; Fanout = 4; COMB Node = 'COUNTER32:u1|Equal0'
+            Info: 4: + IC(4.328 ns) + CELL(0.935 ns) = 9.801 ns; Loc. = LC_X27_Y14_N7; Fanout = 5; REG Node = 'COUNTER32:u2|DOUT[2]'
+            Info: 5: + IC(0.592 ns) + CELL(0.590 ns) = 10.983 ns; Loc. = LC_X27_Y14_N9; Fanout = 4; COMB Node = 'COUNTER32:u2|Equal0'
+            Info: 6: + IC(3.996 ns) + CELL(0.711 ns) = 15.690 ns; Loc. = LC_X1_Y19_N2; Fanout = 5; REG Node = 'COUNTER32:u3|DOUT[0]'
+            Info: Total cell delay = 5.230 ns ( 33.33 % )
+            Info: Total interconnect delay = 10.460 ns ( 66.67 % )
+        Info: - Shortest clock path from clock "Fin" to source register is 14.564 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_28; Fanout = 4; CLK Node = 'Fin'
+            Info: 2: + IC(0.774 ns) + CELL(0.935 ns) = 3.178 ns; Loc. = LC_X5_Y14_N6; Fanout = 6; REG Node = 'COUNTER32:u1|DOUT[0]'
+            Info: 3: + IC(0.579 ns) + CELL(0.114 ns) = 3.871 ns; Loc. = LC_X5_Y14_N3; Fanout = 4; COMB Node = 'COUNTER32:u1|Equal0'
+            Info: 4: + IC(4.328 ns) + CELL(0.935 ns) = 9.134 ns; Loc. = LC_X27_Y14_N0; Fanout = 6; REG Node = 'COUNTER32:u2|DOUT[3]'
+            Info: 5: + IC(0.609 ns) + CELL(0.114 ns) = 9.857 ns; Loc. = LC_X27_Y14_N9; Fanout = 4; COMB Node = 'COUNTER32:u2|Equal0'
+            Info: 6: + IC(3.996 ns) + CELL(0.711 ns) = 14.564 ns; Loc. = LC_X1_Y19_N0; Fanout = 3; REG Node = 'COUNTER32:u3|DOUT[2]'
+            Info: Total cell delay = 4.278 ns ( 29.37 % )
+            Info: Total interconnect delay = 10.286 ns ( 70.63 % )
+    Info: - Micro clock to output delay of source is 0.224 ns
+    Info: - Shortest register to register delay is 0.880 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X1_Y19_N0; Fanout = 3; REG Node = 'COUNTER32:u3|DOUT[2]'
+        Info: 2: + IC(0.571 ns) + CELL(0.309 ns) = 0.880 ns; Loc. = LC_X1_Y19_N2; Fanout = 5; REG Node = 'COUNTER32:u3|DOUT[0]'
+        Info: Total cell delay = 0.309 ns ( 35.11 % )
+        Info: Total interconnect delay = 0.571 ns ( 64.89 % )
+    Info: + Micro hold delay of destination is 0.015 ns
+Info: tco from clock "CLK1Hz" to destination pin "DATOUT[5]" through register "REG32B:reg32b|DAT32[5]" is 15.709 ns
+    Info: + Longest clock path from clock "CLK1Hz" to source register is 9.410 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_153; Fanout = 2; CLK Node = 'CLK1Hz'
+        Info: 2: + IC(1.628 ns) + CELL(0.935 ns) = 4.032 ns; Loc. = LC_X23_Y14_N5; Fanout = 24; REG Node = 'FTCTRL:ftctrl|Div2CLK'
+        Info: 3: + IC(4.667 ns) + CELL(0.711 ns) = 9.410 ns; Loc. = LC_X27_Y14_N3; Fanout = 1; REG Node = 'REG32B:reg32b|DAT32[5]'
+        Info: Total cell delay = 3.115 ns ( 33.10 % )
+        Info: Total interconnect delay = 6.295 ns ( 66.90 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Longest register to pin delay is 6.075 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X27_Y14_N3; Fanout = 1; REG Node = 'REG32B:reg32b|DAT32[5]'
+        Info: 2: + IC(3.951 ns) + CELL(2.124 ns) = 6.075 ns; Loc. = PIN_18; Fanout = 0; PIN Node = 'DATOUT[5]'
+        Info: Total cell delay = 2.124 ns ( 34.96 % )
+        Info: Total interconnect delay = 3.951 ns ( 65.04 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 152 megabytes
+    Info: Processing ended: Tue Jan 01 04:55:11 2013
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
