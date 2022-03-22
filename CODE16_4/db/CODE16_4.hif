@@ -1,0 +1,62 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Full Version
+44
+3127
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+agility.lmf
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+CODE16_4
+# storage
+db|CODE16_4.(0).cnf
+db|CODE16_4.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+code16_4.v
+6722dee715f98cbc52e5b5f57b27e76f
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91|quartus|lmf|agility.lmf
+c573c8f21221151c5ad234ca234ad
+# macro_sequence
+
+# end
+# complete
+
