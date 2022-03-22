@@ -1,0 +1,184 @@
+Simulator report for SHIF6R
+Tue Jan 01 04:06:12 2013
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 50.0 us      ;
+; Simulation Netlist Size     ; 18 nodes     ;
+; Simulation Coverage         ;      64.71 % ;
+; Total Number of Transitions ; 153          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      64.71 % ;
+; Total nodes checked                                 ; 18           ;
+; Total output ports checked                          ; 17           ;
+; Total output ports with complete 1/0-value coverage ; 11           ;
+; Total output ports with no 1/0-value coverage       ; 6            ;
+; Total output ports with no 1-value coverage         ; 6            ;
+; Total output ports with no 0-value coverage         ; 6            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------+
+; Complete 1/0-Value Coverage                              ;
++------------------+--------------------+------------------+
+; Node Name        ; Output Port Name   ; Output Port Type ;
++------------------+--------------------+------------------+
+; |SHIF6R|qtemp[0] ; |SHIF6R|qtemp[0]   ; regout           ;
+; |SHIF6R|qtemp[1] ; |SHIF6R|qtemp[1]   ; regout           ;
+; |SHIF6R|qtemp[2] ; |SHIF6R|qtemp[2]   ; regout           ;
+; |SHIF6R|temp[0]  ; |SHIF6R|temp[0]    ; regout           ;
+; |SHIF6R|temp[1]  ; |SHIF6R|temp[1]    ; regout           ;
+; |SHIF6R|en       ; |SHIF6R|en         ; combout          ;
+; |SHIF6R|qtemp[3] ; |SHIF6R|qtemp[3]   ; regout           ;
+; |SHIF6R|qtemp[4] ; |SHIF6R|qtemp[4]   ; regout           ;
+; |SHIF6R|qtemp[5] ; |SHIF6R|qtemp[5]   ; regout           ;
+; |SHIF6R|dout     ; |SHIF6R|dout       ; padio            ;
+; |SHIF6R|clk      ; |SHIF6R|clk~corein ; combout          ;
++------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------+
+; Missing 1-Value Coverage                                  ;
++----------------+-----------------------+------------------+
+; Node Name      ; Output Port Name      ; Output Port Type ;
++----------------+-----------------------+------------------+
+; |SHIF6R|din[0] ; |SHIF6R|din[0]~corein ; combout          ;
+; |SHIF6R|din[1] ; |SHIF6R|din[1]~corein ; combout          ;
+; |SHIF6R|din[2] ; |SHIF6R|din[2]~corein ; combout          ;
+; |SHIF6R|din[3] ; |SHIF6R|din[3]~corein ; combout          ;
+; |SHIF6R|din[4] ; |SHIF6R|din[4]~corein ; combout          ;
+; |SHIF6R|din[5] ; |SHIF6R|din[5]~corein ; combout          ;
++----------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------+
+; Missing 0-Value Coverage                                  ;
++----------------+-----------------------+------------------+
+; Node Name      ; Output Port Name      ; Output Port Type ;
++----------------+-----------------------+------------------+
+; |SHIF6R|din[0] ; |SHIF6R|din[0]~corein ; combout          ;
+; |SHIF6R|din[1] ; |SHIF6R|din[1]~corein ; combout          ;
+; |SHIF6R|din[2] ; |SHIF6R|din[2]~corein ; combout          ;
+; |SHIF6R|din[3] ; |SHIF6R|din[3]~corein ; combout          ;
+; |SHIF6R|din[4] ; |SHIF6R|din[4]~corein ; combout          ;
+; |SHIF6R|din[5] ; |SHIF6R|din[5]~corein ; combout          ;
++----------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Tue Jan 01 04:06:11 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off SHIF6R -c SHIF6R
+Info: Using vector source file "D:/SHIF6R/SHIF6R.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      64.71 %
+Info: Number of transitions in simulation is 153
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 137 megabytes
+    Info: Processing ended: Tue Jan 01 04:06:13 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

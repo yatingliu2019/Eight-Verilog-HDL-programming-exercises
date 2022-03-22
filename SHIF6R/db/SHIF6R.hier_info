@@ -1,0 +1,19 @@
+|SHIF6R
+clk => temp[0].CLK
+clk => temp[1].CLK
+clk => temp[2].CLK
+clk => qtemp[0].CLK
+clk => qtemp[1].CLK
+clk => qtemp[2].CLK
+clk => qtemp[3].CLK
+clk => qtemp[4].CLK
+clk => qtemp[5].CLK
+din[0] => qtemp.DATAB
+din[1] => qtemp.DATAB
+din[2] => qtemp.DATAB
+din[3] => qtemp.DATAB
+din[4] => qtemp.DATAB
+din[5] => qtemp.DATAB
+dout <= qtemp[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
